@@ -1,13 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
+import { render } from '@testing-library/react';
 
 function App() {
-  return (
+  constructor(props) {
+    super(props);
+    this.state = {
+      name:'Phillipe Csorgo'
+    };
+  }
+
+  render() {
+
+    const name = this.state.name
+    return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {name}
         </p>
         <a
           className="App-link"
@@ -20,6 +32,10 @@ function App() {
       </header>
     </div>
   );
+  }
+
+    
+  
 }
 
 export default App;
