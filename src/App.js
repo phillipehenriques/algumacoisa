@@ -3,9 +3,10 @@ import './App.css';
 import { Component } from 'react';
 import { render } from '@testing-library/react';
 
-function App() {
+class App extends Component{
   constructor(props) {
     super(props);
+
     this.state = {
       name:'Phillipe Csorgo'
     };
@@ -19,7 +20,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {name}
+          {nome}
         </p>
         <a
           className="App-link"
@@ -33,9 +34,6 @@ function App() {
     </div>
   );
   }
-
     
-  
-}
 
 export default App;
